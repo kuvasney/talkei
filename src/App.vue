@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <navbar></navbar>
     <header>
       <h1>
         Saudações ao nosso <em>grande</em> presidente, talkei!
@@ -13,8 +14,10 @@
 </template>
 
 <script>
+import Navbar from '@/components/Navbar'
 export default {
-  name: 'App'
+  components: { Navbar },
+  name: 'App',
 }
 </script>
 
@@ -51,20 +54,7 @@ h2 {
 }
 
 ul {
-  list-style-type: none;
-  padding: 0;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
+  list-style: none;
 }
 
-li {
-  margin: 0;
-  width: 25%;
-  height: 20vh;
-  justify-content: middle;
-  text-align: center;
-  padding: 2%;
-}
 </style>

@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    User: {{ user.userDetails[0].displayName }} 
     <section class="main">
       <p class="call">
         <a @click="addNewTweet = !addNewTweet">Clique aqui e inclua sua mensagem personalizada na lista!</a>
@@ -16,6 +17,7 @@
           </footer>
         </form>
       </article>
+      <button @click="signIn">auth Twitter</button>
       <ul class="tweetlist">
         <li v-for="(tweet, index) in tweets" :key="index" :style="{'backgroundColor': bgcolor[randColor()]}">
           <div :class="checkLength(tweet.message)">
@@ -35,10 +37,17 @@
 </template>
 
 <script>
+
 export default {
   name: 'Home',
+  computed: {
+   user () {
+     return this.$store.getters.user
+    }  
+  }, 
   data () {
     return {
+      twitter_url: '',
       'tweets': [
         {
           'message': '(SMALLER) BOM DIA SENHOR PRESIDENTE! '
@@ -59,6 +68,7 @@ export default {
           'message': 'PARABÉNS AO EMPENHO DE @DNITOFICIAL E @EXERCITOOFICIAL. A SERRA DA ANITA É UM TRECHO QUE REQUER UMA ATENÇÃO ESPECIAL. TODO CAMINHONEIRO QUE PERCORRE A BR-163 VAI SABER DA IMPORTÂNCIA DESSA INTERVENÇÃO. AINDA TEM CHAR PARA ACRESCENTAR ATÉ O LIMITE DE 256 12'
         }
       ],
+      tweet_list: {},
       bgcolor: [
         '#d1c9dd', '#e7235a', '#514d68', '#962f90', '#95c623', '#0e4749', '#e55812', '#1d0e40', '#002626', '#2274a5', '#31abb2', '#4c5b5c', '#644536', '#29bf12'
       ],
@@ -67,6 +77,12 @@ export default {
     }
   },
   methods: {
+    authenticate: function (provider) {
+      this.$auth.authenticate(provider).then(function (res) {
+        // Execute application logic after successful social authentication
+        console.log(res)
+      })
+    },
     checkLength: function (message) {
       if (message.length <= 50) {
         return 'smaller'
@@ -90,7 +106,14 @@ export default {
       this.tweets.push(newTweet)
       this.new_tweet = ''
     },
+
+    signIn: function () {
+      this.$store.dispatch('signIn')
+    },
+
     ready: function () {
+      console.log(this.$store)
+      // this.$store.dispatch('signIn')
     }
   },
   mounted () {
@@ -100,7 +123,6 @@ export default {
 
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 
 * {
