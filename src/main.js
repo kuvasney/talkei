@@ -23,7 +23,7 @@ const check = firebase.auth().onAuthStateChanged((user) => {
     components: { App },
     template: '<App/>',
     store,
-    created() {
+    created () {
       if (user) {
         store.dispatch('autoSignIn', user)
       }
