@@ -1,0 +1,36 @@
+<div class="home">
+  <section class="main">
+    <p class="call">
+      <a @click="addNewTweet = !addNewTweet">
+        <span v-if="!addNewTweet">Clique aqui e inclua sua mensagem personalizada na lista!</span>
+        <span v-else>Fechar</span>
+      </a>
+    </p>
+    <article class="add-new-tweet" v-show="addNewTweet">
+      <form @submit.prevent="makeNewTweet($event)">
+        <div>
+          <textarea name="new-tweet" cols="30" rows="10" v-model="new_tweet"></textarea>
+          <span class="count_tweet">{{ 256 - new_tweet.length }}</span>
+        </div>
+        <footer class="button">
+          <p class="disclaimer">Fique tranquilo, tudo aqui é anônimo. Não queremos saber o seu nome ou dados pessoais</p>
+          <button :disabled="new_tweet.length < 1 || new_tweet.length > 255">Enviar</button>
+        </footer>
+      </form>
+    </article>
+    <ul class="tweetlist">
+      <li v-for="(tweet, index) in tweets" :key="index" :style="{'backgroundColor': bgcolor[randColor()]}" @click="messages_sent++">
+        <div :class="checkLength(tweet.message)">
+          <a :href="`https://twitter.com/intent/tweet?screen_name=jairbolsonaro&button_hashtag=TALKEI&text=${tweet.message}`">{{ tweet.message }}</a>
+        </div>
+        <!-- <em>{{ checkLength(tweet.message) }} - {{tweet.message.length}}</em> -->
+      </li>
+      <li class="separator"></li>
+      <li class="counter">
+        <div>
+          {{ messages_sent }} Tweets enviados até o momento
+        </div>
+      </li>
+    </ul>
+  </section>
+</div>

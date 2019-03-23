@@ -1,0 +1,1254 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"new",
+				"new_tweet"
+			],
+			[
+				"twe",
+				"tweets"
+			],
+			[
+				"fl",
+				"flex-direction"
+			],
+			[
+				"bgc",
+				"background-color"
+			],
+			[
+				"en",
+				"endTime"
+			],
+			[
+				"Parse",
+				"parseInit"
+			],
+			[
+				"parse",
+				"parseInit"
+			],
+			[
+				"fa",
+				"facepileContainer"
+			],
+			[
+				"fle",
+				"flex-start\talign-self"
+			],
+			[
+				"flex",
+				"flex-start\talign-items"
+			],
+			[
+				"n",
+				"nextActivities"
+			],
+			[
+				"next",
+				"next_activity"
+			],
+			[
+				"activi",
+				"activity"
+			],
+			[
+				"ac",
+				"activity"
+			],
+			[
+				"aciv",
+				"activity_id"
+			],
+			[
+				"wi",
+				"width\twidth - Vuetify"
+			],
+			[
+				"tran",
+				"transform\tproperty"
+			],
+			[
+				"a",
+				"activity"
+			],
+			[
+				"acti",
+				"activity"
+			],
+			[
+				"act",
+				"activities"
+			],
+			[
+				"activ",
+				"activity"
+			],
+			[
+				"line_",
+				"line_height"
+			],
+			[
+				"id",
+				"idTask"
+			],
+			[
+				"proje",
+				"projectId"
+			],
+			[
+				"sea",
+				"searchType"
+			],
+			[
+				"sta",
+				"stakeholder"
+			],
+			[
+				"proj",
+				"projectId"
+			],
+			[
+				"estimat",
+				"estimated_date_end"
+			],
+			[
+				"updatePass",
+				"update-password"
+			],
+			[
+				"con",
+				"confirm"
+			],
+			[
+				"pass",
+				"password"
+			],
+			[
+				"set",
+				"SettingsServices"
+			],
+			[
+				"Se",
+				"SettingsServices"
+			],
+			[
+				"mess",
+				"messageParams"
+			],
+			[
+				"Pend",
+				"PendingActions"
+			],
+			[
+				"no",
+				"nowrap\twhite-space"
+			],
+			[
+				"box-s",
+				"box-shadow\tproperty"
+			],
+			[
+				"wra",
+				"pre-wrap\twhite-space"
+			],
+			[
+				"spac",
+				"space-between\tjustify-content"
+			],
+			[
+				"inlin",
+				"inline-block\tdisplay"
+			],
+			[
+				"spa",
+				"space-between\tjustify-content"
+			],
+			[
+				"re",
+				"relative\tposition"
+			],
+			[
+				"fn",
+				"function"
+			],
+			[
+				"pen",
+				"pendingActive"
+			],
+			[
+				"ta",
+				"idTask"
+			],
+			[
+				"cur",
+				"cursorPositioning"
+			],
+			[
+				"area",
+				"arealength"
+			],
+			[
+				"inne",
+				"innerHTML"
+			],
+			[
+				"caret",
+				"caretPos"
+			],
+			[
+				"care",
+				"caretPos"
+			],
+			[
+				"create",
+				"createTextRange"
+			],
+			[
+				"emo",
+				"emoji"
+			],
+			[
+				"pas",
+				"pasteHtmlAtCaret"
+			],
+			[
+				"emoji",
+				"emojiList"
+			],
+			[
+				"pendi",
+				"pendingsInfo"
+			],
+			[
+				"lo",
+				"loadFlux"
+			],
+			[
+				"mr",
+				"mr\tmargin-right"
+			],
+			[
+				"fluxo",
+				"fluxogram"
+			],
+			[
+				"flux",
+				"flux_specs"
+			],
+			[
+				"ativ",
+				"atividadesIniciais"
+			],
+			[
+				"ati",
+				"atividadesIniciais"
+			],
+			[
+				"flu",
+				"Fluxograma"
+			],
+			[
+				"getA",
+				"getAParada"
+			],
+			[
+				"cal",
+				"calendar"
+			],
+			[
+				"calen",
+				"calendar"
+			],
+			[
+				"is",
+				"is_default"
+			],
+			[
+				"ca",
+				"calendar_ids"
+			],
+			[
+				"r",
+				"right"
+			],
+			[
+				"bor",
+				"border-right"
+			],
+			[
+				"str",
+				"stroke-width"
+			],
+			[
+				"des",
+				"desktop-only"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"s",
+				"showDetails"
+			],
+			[
+				"publi",
+				"publication_single"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "src/components/Home/Home.scss",
+			"settings":
+			{
+				"buffer_size": 1976,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/vuex/store.js",
+			"settings":
+			{
+				"buffer_size": 1083,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "test/unit/specs/HelloWorld.spec.js",
+			"settings":
+			{
+				"buffer_size": 336,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/router/index.js",
+			"settings":
+			{
+				"buffer_size": 803,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/components/Home/Home.js",
+			"settings":
+			{
+				"buffer_size": 2953,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/components/Home/Home.vue",
+			"settings":
+			{
+				"buffer_size": 127,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/components/SignIn/SignIn.js",
+			"settings":
+			{
+				"buffer_size": 95,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/components/SignIn/SignIn.vue",
+			"settings":
+			{
+				"buffer_size": 133,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/firebaseConfig.js",
+			"settings":
+			{
+				"buffer_size": 288,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/includes/Navbar.vue",
+			"settings":
+			{
+				"buffer_size": 837,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/main.js",
+			"settings":
+			{
+				"buffer_size": 734,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"disa",
+				"Package Control: Disable Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 461.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/rafael/_Trabalho/talkei",
+		"/home/rafael/_Trabalho/talkei/src",
+		"/home/rafael/_Trabalho/talkei/src/components",
+		"/home/rafael/_Trabalho/talkei/src/includes",
+		"/home/rafael/_Trabalho/talkei/src/router",
+		"/home/rafael/_Trabalho/talkei/src/vuex",
+		"/home/rafael/_Trabalho/talkei/test",
+		"/home/rafael/_Trabalho/talkei/test/unit",
+		"/home/rafael/_Trabalho/talkei/test/unit/specs"
+	],
+	"file_history":
+	[
+		"/home/rafael/_Trabalho/talkei/src/main.js",
+		"/home/rafael/_Trabalho/talkei/src/components/Home/Home.html",
+		"/home/rafael/_Trabalho/talkei/src/components/Home/Home.js",
+		"/home/rafael/_Trabalho/talkei/src/components/SignIn/SignIn.js",
+		"/home/rafael/_Trabalho/talkei/src/components/SignIn/SignIn.scss",
+		"/home/rafael/_Trabalho/talkei/src/components/SignIn/SignIn.html",
+		"/home/rafael/_Trabalho/talkei/src/components/SignIn/SignIn.vue",
+		"/home/rafael/_Trabalho/talkei/src/components/Home/Home.scss",
+		"/home/rafael/Downloads/twitterauth-master/src/components/SignIn.vue",
+		"/home/rafael/Downloads/twitterauth-master/src/main.js",
+		"/home/rafael/_Trabalho/talkei/src/includes/Navbar.vue",
+		"/home/rafael/_Trabalho/talkei/src/App.vue",
+		"/home/rafael/_Trabalho/talkei/src/vuex/store.js",
+		"/home/rafael/_Trabalho/talkei/src/router/index.js",
+		"/home/rafael/_Trabalho/talkei/src/components/SignIn.vue",
+		"/home/rafael/_Trabalho/talkei/src/components/Home/Home.vue",
+		"/home/rafael/_Trabalho/talkei/src/components/Home.vue",
+		"/home/rafael/Downloads/twitterauth-master/src/App.vue",
+		"/home/rafael/Downloads/twitterauth-master/src/components/Navbar.vue",
+		"/home/rafael/Downloads/twitterauth-master/src/components/Home.vue",
+		"/home/rafael/Downloads/twitterauth-master/config/index.js",
+		"/home/rafael/Downloads/twitterauth-master/src/vuex/store.js",
+		"/home/rafael/Downloads/twitterauth-master/src/router/index.js",
+		"/home/rafael/_Trabalho/talkei/src/components/Navbar.vue",
+		"/home/rafael/Downloads/twitterauth-master/src/components/HelloWorld.vue",
+		"/home/rafael/Downloads/twitterauth-master/config/dev.env.js",
+		"/home/rafael/_Trabalho/talkei/src/firebaseConfig.js",
+		"/home/rafael/_Trabalho/talkei/src/components/Novo.vue",
+		"/home/rafael/Downloads/twitterauth-master/src/firebaseConfig.js",
+		"/home/rafael/Downloads/twitterauth-master/package.json",
+		"/home/rafael/Downloads/index (1).php",
+		"/home/rafael/_Trabalho/talkei/src/services/home.js",
+		"/home/rafael/_Trabalho/korot/pages/projects/_projectId/flux/_idTask.vue",
+		"/home/rafael/_Trabalho/korot/partials/gantt/gantt.js",
+		"/home/rafael/_Trabalho/talkei/index.html",
+		"/home/rafael/_Trabalho/react-course-projects/indecision-app/src/app.js",
+		"/home/rafael/Downloads/twitterauth-master/index.html",
+		"/home/rafael/.cache/.fr-R0xeaw/home.php",
+		"/home/rafael/_Trabalho/korot/pages/business/index.vue",
+		"/home/rafael/_Trabalho/korot/partials/models/models.scss",
+		"/home/rafael/_Trabalho/bozo/src/App.vue",
+		"/home/rafael/_Trabalho/bozo/src/Novo.vue",
+		"/home/rafael/_Trabalho/testevue/teste-vue/src/main.js",
+		"/home/rafael/_Trabalho/bozo/src/main.js",
+		"/home/rafael/_Trabalho/dolce-design/package.json",
+		"/home/rafael/_Trabalho/bozo/public/index.html",
+		"/home/rafael/_Trabalho/dolce-design/src/main.js",
+		"/home/rafael/_Trabalho/testevue/teste-vue/src/App.vue",
+		"/home/rafael/_Trabalho/korot/partials/calendars/calendars.js",
+		"/home/rafael/_Trabalho/korot/partials/fluxogram/fluxogram.scss",
+		"/home/rafael/_Trabalho/korot/partials/fluxogram/fluxogram.js",
+		"/home/rafael/_Trabalho/korot/assets/scss/config/_colors.scss",
+		"/home/rafael/_Trabalho/korot/components/confirm/confirm.vue",
+		"/home/rafael/_Trabalho/korot/partials/projects/projects.js",
+		"/home/rafael/_Trabalho/korot/store/index.js",
+		"/home/rafael/_Trabalho/korot/nuxt.config.js",
+		"/home/rafael/_Trabalho/korot/pages/access/set-new-pass/_token.vue",
+		"/home/rafael/_Trabalho/korot/pages/access/first-access/_token.vue",
+		"/home/rafael/_Trabalho/korot/partials/access/set-new-pass/set-new-pass.js",
+		"/home/rafael/_Trabalho/korot/partials/pendings/pendings.js",
+		"/home/rafael/_Trabalho/korot/middleware/authenticated.js",
+		"/home/rafael/_Trabalho/korot/.nuxt/auth/auth.js",
+		"/home/rafael/_Trabalho/korot/pages/business/_businessId.vue",
+		"/home/rafael/_Trabalho/korot/partials/business/business.js",
+		"/home/rafael/_Trabalho/korot/partials/business/business.scss",
+		"/home/rafael/_Trabalho/korot/layouts/default.js",
+		"/home/rafael/_Trabalho/korot/pages/admin/index.vue",
+		"/home/rafael/_Trabalho/korot/pages/report/index.vue",
+		"/home/rafael/_Trabalho/korot/pages/settings/user/_id.vue",
+		"/home/rafael/_Trabalho/korot/assets/scss/layout/_aside.scss",
+		"/home/rafael/_Trabalho/korot/partials/report/report.js",
+		"/home/rafael/_Trabalho/korot/partials/settings/user/user-settings.js",
+		"/home/rafael/_Trabalho/korot/pages/pendings/_pendingId.vue",
+		"/home/rafael/_Trabalho/korot/layouts/breadcrumb/breadcrumb.js",
+		"/home/rafael/_Trabalho/korot/pages/pendings/index.vue",
+		"/home/rafael/_Trabalho/korot/assets/js/lib.js",
+		"/home/rafael/_Trabalho/korot/components/facepile/facepile.js",
+		"/home/rafael/_Trabalho/korot/components/facepile/facepile.scss",
+		"/home/rafael/_Trabalho/korot/components/facepile/facepile.vue",
+		"/home/rafael/_Trabalho/korot/pages/teams/index.vue",
+		"/home/rafael/_Trabalho/korot/partials/teams/teams.js",
+		"/home/rafael/_Trabalho/korot/assets/scss/base/_utilities.scss",
+		"/home/rafael/_Trabalho/korot/partials/teams/teams.scss",
+		"/home/rafael/_Trabalho/korot/partials/flux/fluxogram.scss",
+		"/home/rafael/_Trabalho/korot/partials/flux/flux.js",
+		"/home/rafael/_Trabalho/fluxogram_backup.scss",
+		"/home/rafael/_Trabalho/korot/partials/projects/sub-pages/projects/projects.js",
+		"/home/rafael/_Trabalho/korot/partials/flux/flux.services.js",
+		"/home/rafael/_Trabalho/korot/pages/models/_modelId/flux/_idTask.vue",
+		"/home/rafael/_Trabalho/korot/partials/gantt/models/models-gantt.js",
+		"/home/rafael/_Trabalho/korot/pages/models/_modelId/flux/_id.vue",
+		"/home/rafael/_Trabalho/korot/components/faceUnique/faceUnique.vue",
+		"/home/rafael/_Trabalho/korot/components/faceUnique/faceUnique.js",
+		"/home/rafael/_Trabalho/korot/components/faceUnique/faceUnique.services.js",
+		"/home/rafael/_Trabalho/korot/components/facepile/facepile.services.js",
+		"/home/rafael/_Trabalho/korot/partials/gantt/gantt.services.js",
+		"/home/rafael/_Trabalho/korot/partials/gantt/gantt.scss",
+		"/home/rafael/_Trabalho/korot/pages/models/gantt/_id.vue",
+		"/home/rafael/_Trabalho/korot/components/faceUnique/faceUnique.scss",
+		"/home/rafael/_Trabalho/korot/pages/settings/index.vue",
+		"/home/rafael/_Trabalho/korot/partials/settings/settings.js",
+		"/home/rafael/_Trabalho/korot/partials/settings/settings.services.js",
+		"/home/rafael/_Trabalho/korot/partials/settings/settings.scss",
+		"/home/rafael/_Trabalho/korot/pages/access/recovery-pass/index.vue",
+		"/home/rafael/_Trabalho/korot/partials/access/recovery-pass/recovery-pass.js",
+		"/home/rafael/_Trabalho/korot/pages/calendar/index.vue",
+		"/home/rafael/_Trabalho/korot/pages/gantt/_id.vue",
+		"/home/rafael/_Trabalho/korot/layouts/usernav/usernav.js",
+		"/home/rafael/_Trabalho/korot/layouts/default.vue",
+		"/home/rafael/_Trabalho/korot/layouts/usernav/usernav.vue",
+		"/home/rafael/_Trabalho/korot/pages/index.vue",
+		"/home/rafael/_Trabalho/korot/components/messages/messages.services.js",
+		"/home/rafael/_Trabalho/korot/components/pendingDetails/pendingDetails.vue",
+		"/home/rafael/_Trabalho/korot/components/pendingDetails/pendingDetails.services.js",
+		"/home/rafael/_Trabalho/korot/components/pendingDetails/pendingDetails.js",
+		"/home/rafael/_Trabalho/korot/components/messages/messages.js",
+		"/home/rafael/_Trabalho/korot/components/pendingActions/pendingActions.services.js",
+		"/home/rafael/_Trabalho/korot/partials/pendings/pendings.services.js",
+		"/home/rafael/_Trabalho/korot/components/pendingActions/pendingActions.vue",
+		"/home/rafael/_Trabalho/korot/pages/modelos/gantt/_id.vue",
+		"/home/rafael/_Trabalho/korot/partials/pendings/pendings.scss",
+		"/home/rafael/_Trabalho/korot/assets/scss/ui/_modal.scss",
+		"/home/rafael/_Trabalho/korot/assets/scss/ui/_tips.scss",
+		"/home/rafael/_Trabalho/korot/assets/scss/lib.scss",
+		"/home/rafael/_Trabalho/korot/partials/models/sub-pages/models/components/editableForm/editableForm.scss",
+		"/home/rafael/_Trabalho/korot/partials/models/sub-pages/models/components/editableForm/editableForm.vue",
+		"/home/rafael/_Trabalho/korot/components/modal/modal.scss",
+		"/home/rafael/_Trabalho/korot/pages/flux/_idTask.vue"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 98.0,
+		"where_history":
+		[
+			"/home/rafael/_Trabalho/talkei/src",
+			"/home/rafael/_Trabalho/korot/partials",
+			"/home/rafael/_Trabalho/korot",
+			"/home/rafael/_Trabalho/korot/assets/scss",
+			"/home/rafael/_Trabalho/korot/assets/scss/ui",
+			"/home/rafael/_Trabalho/korot/assets/scss",
+			"/home/rafael/_Trabalho/korot",
+			"/home/rafael/_Trabalho/korot/pages",
+			"/home/rafael/_Trabalho/korot/components",
+			"/home/rafael/_Trabalho/korot/partials/models/sub-pages/models/components",
+			"/home/rafael/_Trabalho/korot/assets/scss",
+			"/home/rafael/_Trabalho/korot",
+			"/home/rafael/_Trabalho/korot/components",
+			"/home/rafael/_Trabalho/korot/partials",
+			"/home/rafael/_Trabalho/korot/partials/project-models",
+			"/home/rafael/_Trabalho/korot/partials",
+			"/home/rafael/_Trabalho/korot/pages",
+			"/home/rafael/_Trabalho/korot/assets",
+			"/home/rafael/_Trabalho/korot/components",
+			"/home/rafael/_Trabalho/korot/pages",
+			"/home/rafael/_Trabalho/solaria/se2_machine/coruscant/src/app/modules/gasp",
+			"/home/rafael/_Trabalho/solaria/se2_machine/coruscant/src",
+			"/home/rafael/_Trabalho/solaria/se2_machine/coruscant/src/app/modules/gasp",
+			"/home/rafael/_Trabalho/solaria/se2_machine/coruscant/src",
+			"/home/rafael/_Trabalho/solaria/se2_machine/coruscant/src/app/modules",
+			"/home/rafael/_Trabalho/solaria/se2_machine/coruscant/src"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"\"",
+			";",
+			"firebaseConfig",
+			"    ",
+			"authe",
+			"console.log",
+			"auth_url",
+			"makeNewTweet",
+			"res",
+			" ",
+			"em",
+			"call",
+			"v-model",
+			"font",
+			"map",
+			"<router-link>",
+			"checkPlanningTime",
+			"ui",
+			"toolt",
+			"diff",
+			"moment",
+			"confir",
+			"loadProject",
+			"formatFlow",
+			"hou",
+			"progress",
+			".diff",
+			"prev",
+			".prev",
+			"activity_id",
+			".prev",
+			"activity_id",
+			"filter",
+			"removeActivity",
+			"fil",
+			"stat",
+			"removeac",
+			"remove",
+			"console.log",
+			"console",
+			"project:",
+			"newActivityName",
+			"newac",
+			"nextT",
+			"new_activity_on",
+			"roles",
+			"hiperAdmin",
+			"get",
+			"!--",
+			"ready",
+			"loading",
+			"load",
+			"preloader",
+			"v-show",
+			"plus",
+			"puls",
+			"click",
+			"><!----></i>",
+			"plus",
+			"prese",
+			"icon-plus",
+			"list",
+			"wrap",
+			":key",
+			"key",
+			"keys",
+			"line_height",
+			"line",
+			"activity_id",
+			"nflow.activity_id",
+			"getBoundingClientRect",
+			"$eve",
+			"_flow",
+			"i",
+			"_flow",
+			"name",
+			"activity.name",
+			"input",
+			"indexers",
+			".margin",
+			"margin",
+			"fluxog",
+			"approv",
+			"-tab",
+			"class=\"step\"",
+			"line_top",
+			"newflow",
+			"step",
+			"idt",
+			"idtask",
+			"idtas",
+			"calendar.",
+			"calendar",
+			"nenhum",
+			"both",
+			"options",
+			"search_",
+			"displ",
+			"searchType",
+			"type",
+			"displ",
+			"type",
+			"faces",
+			".get",
+			"não é per",
+			"observers",
+			"stakeholder",
+			".name",
+			"type",
+			"user.",
+			".name",
+			"user",
+			"addStakeholder",
+			"formatInitials",
+			"owne",
+			"stat",
+			"updateT",
+			"update",
+			"comment",
+			"descr",
+			".estimated_date_end",
+			".estimated_date_start",
+			".cols",
+			"'days",
+			"obj.estimated_date_end",
+			"obj.estimated_date_start",
+			"setBar",
+			"toda"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"'",
+			"",
+			"  ",
+			"/>",
+			"search_type",
+			".reference_day_end",
+			".reference_day_start",
+			"obj.reference_day_end",
+			"obj.reference_day_start",
+			"<div class=\"page-settings__line\" />",
+			" />",
+			" this.doActions.moment",
+			" />",
+			"$default-blue",
+			"share",
+			"Link para esta pendência",
+			"share",
+			"Link para esta pendência",
+			"share",
+			"  ",
+			"pendingsInfo.",
+			"pendingsInfo",
+			"endingsComplete.meta.pagination",
+			"pendingsComplete",
+			"activity",
+			"next",
+			"atividade",
+			"\"responsible\": [{\n            \"avatar\": \"\",\n            \"email\": \"rafael.marcolin@ftd.com.br\",\n            \"name\": \"Rafael Kuvasney Marcolin\",\n            \"slug\": \"kuvas\" \n          }],",
+			"Entrega",
+			"Revisão",
+			"Entrega",
+			"Endpoints",
+			"Conceito",
+			"HTML",
+			"Fluxograma",
+			"Início do Desenvovlimento",
+			"Relatórios",
+			"Criação",
+			"Detalhamento do escopo",
+			"Organização do Documentação",
+			"atividade.",
+			"task.",
+			"etapa",
+			"box-shadow: $shadowOn;",
+			"$shadowOn",
+			"box-shadow: 0 5px 2px rgba(0,0,0,0.5);",
+			"",
+			"Atividade 2",
+			"blueoceanevents.com.br",
+			"el/_Trabalho/blueocean/",
+			"/home/rafael/_Trabalho/blueocean",
+			"local.blueoceanevents.com.br"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "src/components/Home/Home.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1976,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1976,
+								1976
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/SCSS.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1708.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/vuex/store.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1083,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1069,
+								1069
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 267.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "test/unit/specs/HelloWorld.spec.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 336,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								336,
+								336
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/router/index.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 803,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								691,
+								691
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/components/Home/Home.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2953,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2953,
+								2953
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1171.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/components/Home/Home.vue",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 127,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								127,
+								127
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Vuejs Complete Package/vue.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "src/components/SignIn/SignIn.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 95,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								95,
+								95
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "src/components/SignIn/SignIn.vue",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 133,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								133,
+								133
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Vuejs Complete Package/vue.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "src/firebaseConfig.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 288,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								288,
+								288
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "src/includes/Navbar.vue",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 837,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								837,
+								837
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Vuejs Complete Package/vue.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 229.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "src/main.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 734,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								636,
+								636
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 36.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.doc":
+	{
+		"height": 0.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "talkei.sublime-project",
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 438.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 333.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 318.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

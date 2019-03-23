@@ -13,9 +13,7 @@
 </template>
 
 <script>
-import Navbar from '@/includes/Navbar'
 export default {
-  components: { Navbar },
   name: 'App'
 }
 </script>

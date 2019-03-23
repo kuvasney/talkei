@@ -1,0 +1,175 @@
+$breakpoints: (
+  'small':  360px,
+  'medium': 992px,
+  'large':  1200px
+) !default;
+
+/// Mixin to manage responsive breakpoints
+/// @author Hugo Giraudel
+/// @param {String} $breakpoint - Breakpoint name
+/// @require $breakpoints
+@mixin respond-to($breakpoint) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+ 
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1, h2 {
+  font-weight: normal;
+}
+
+.call {
+  text-align: center;
+  line-height: 60px;
+  font-size: 1.4em;
+  margin: 0;
+
+  a {
+    color: #5c5c5c;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+li {
+  margin: 0;
+  justify-content: middle;
+  text-align: center;
+  position: relative;
+  vertical-align: middle;
+  padding: 2%;
+  position: relative;
+
+  @include respond-to('small') {
+    width: 100%;
+  }
+
+  @include respond-to('medium') {
+    width: 25%;
+    height: 50vh;
+  }
+
+  a {
+    color: #FFF;
+    text-decoration: none;
+  }
+
+  &.separator {
+    background-color: #f21b3f;
+  }
+
+  &.counter {
+    background-color: #ffbc0a;
+  }
+
+  em {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: .8em;
+    color: #000;
+    display: block;
+    background-color: #0c0;
+  }
+
+  div {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #FFF;
+    font-weight: 700;
+    font-size: 1.5em;
+    overflow: hidden;
+    hyphens: auto;
+
+    &.smaller {
+      font-size: 4.2vh;
+    }
+    &.small {
+      font-size: 3.6vh;
+    }
+    &.medium {
+      font-size: 2.9vh;
+    }
+    &.big {
+      font-size: 2.5vh;
+    }
+    &.bigger {
+      font-size: 2.0vh;
+    }
+  }
+}
+
+.add-new-tweet {
+  background-color: #def4fa;
+  padding: 20px 0;
+
+  div {
+    position: relative;
+  }
+
+  textarea {
+    border: 2px solid #59cef2;
+    border-radius: 5px;
+    width: 80%;
+    margin: 20px auto;
+    display: block;
+  }
+
+  .count_tweet {
+    position: absolute;
+    bottom: 5px;
+    right: 12%;
+    font-size: 0.8em;
+    color: #999;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+
+    button {
+      background-color: #59cef2;
+      border: 0;
+      border-radius: 30px;
+      font-size: 1.5em;
+      color: #FFF;
+      padding: .5em 1em;
+
+      &[disabled] {
+        opacity: 0.1;
+      }
+    }
+  }
+
+  .disclaimer {
+    color: #59cef2;
+    font-size: 0.8em;
+  }
+}
