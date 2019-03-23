@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <navbar></navbar>
     <header>
       <h1>
         Saudações ao nosso <em>grande</em> presidente, talkei!
