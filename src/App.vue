@@ -7,6 +7,7 @@
       <h2>
         Clique na mensagem que quer enviar para o twitter do <a href="https://twitter.com/jairbolsonaro">@jairbolsonaro</a>
       </h2>
+      <div class="sharethis-inline-share-buttons"></div>
     </header>
     <router-view/>
   </div>
