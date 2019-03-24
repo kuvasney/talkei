@@ -1,8 +1,7 @@
 function Factory () {
   /**
-   * Buscar empresas
+   * Get stored Tweets
    * @param {axios} actions
-   * @param {string} query
    * @return {object} request
    */
   this.Get = (axios, query) => {
@@ -11,14 +10,14 @@ function Factory () {
     return request
   }
   /**
-   * Buscar empresas
+   * Save a new tweet
    * @param {axios} actions
-   * @param {string} query
+   * @param {object} tweet message
    * @return {object} request
    */
   this.PostTweet = (axios, params) => {
-    const request = axios.post(`https://www.talkei.net/store`, params)
-
+    const request = axios.get(`https://www.talkei.net/store`, params)
+    
     return request
   }
 }
