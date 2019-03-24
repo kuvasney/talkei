@@ -6,9 +6,10 @@
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "local": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js --host 0.0.0.0 --disable-host-check",
     "start": "npm run dev",
     "test": "npm run unit",
-    "lint": "eslint --ext .js,.vue src test/unit",
+    "lint": "eslint --ext --fix .js,.vue src test/unit",
     "build": "node build/build.js"
   },
   "dependencies": {
