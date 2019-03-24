@@ -20,8 +20,8 @@
     </article>
     <ul class="tweetlist">
       <li v-for="(tweet, index) in tweets" :key="index" :style="{'backgroundColor': bgcolor[randColor()]}" @click="messages_sent++">
-        <div :class="checkLength(tweet.message)">
-          <a :href="`https://twitter.com/intent/tweet?screen_name=jairbolsonaro&button_hashtag=TALKEI&text=${tweet.message}`">{{ tweet.message }}</a>
+        <div :class="checkLength(tweet.tweet)">
+          <a :href="`https://twitter.com/intent/tweet?screen_name=jairbolsonaro&button_hashtag=TALKEI&text=${tweet.tweet}`">{{ tweet.tweet }}</a>
         </div>
         <!-- <em>{{ checkLength(tweet.message) }} - {{tweet.message.length}}</em> -->
       </li>
@@ -32,5 +32,6 @@
         </div>
       </li>
     </ul>
+    <a @click="bringMyTweets()">Get Me</a>
   </section>
 </div>

@@ -1,35 +1,11 @@
+import HomeServices from '@/services/home.js'
 export default {
   name: 'Home',
   components: {},
   data () {
     return {
       twitter_url: '',
-      'tweets': [
-        {
-          'message': 'Não vai fazer merda hoje, por favor'
-        },
-        {
-          'message': 'O Brasil merece Bolsonaro.'
-        },
-        {
-          'message': '(SMALLER) BOM DIA SENHOR PRESIDENTE! '
-        },
-        {
-          'message': '(SMALLER) GRANDE DIA (SMALLER) GRANDE DIA!!!! DIA1'
-        },
-        {
-          'message': 'A FALA DELES É SÓ ESSA...MAS A PRISÃO DE LULA NÃO ALTERA A CORRUPÇÃO DO LARANJAL PAULISTA LUGAR 😂🍊'
-        },
-        {
-          'message': '(SMALL) GRANDE DIA CAPITÃO, RESGATAR A CONFIABILIDADE É MUITO IMPORTANTE. DEUS ABENÇOE. BRASIL ACIMA 🇧🇷 DEUS ACIMA DE TODOS 🙏. VAMOS AOS 150 FALTA1'
-        },
-        {
-          'message': 'LIVE SEMANAL DE QUINTA-FEIRA COM O PRESIDENTE E MINISTROS, ÀS 18:30. A PARTIR DA SEMANA QUE VEM AS REALIZAREMOS ÀS 19:00. TEMAS DE HOJE: VIAGEM AOS EUA, VACINAÇÃO CONTRA GRIPE E EU ESTOU TENTANDO CH.:'
-        },
-        {
-          'message': 'PARABÉNS AO EMPENHO DE @DNITOFICIAL E @EXERCITOOFICIAL. A SERRA DA ANITA É UM TRECHO QUE REQUER UMA ATENÇÃO ESPECIAL. TODO CAMINHONEIRO QUE PERCORRE A BR-163 VAI SABER DA IMPORTÂNCIA DESSA INTERVENÇÃO. AINDA TEM CHAR PARA ACRESCENTAR ATÉ O LIMITE DE 256 12'
-        }
-      ],
+      tweets: [],
       tweet_list: {},
       bgcolor: [
         '#d1c9dd', '#e7235a', '#514d68', '#962f90', '#95c623', '#0e4749', '#e55812', '#1d0e40', '#002626', '#2274a5', '#31abb2', '#4c5b5c', '#644536', '#29bf12'
@@ -39,7 +15,12 @@ export default {
       messages_sent: 0
     }
   },
-  methods: {
+  methods: {    
+    /**
+     * Checks the lenght of each tweet
+     * @param {String} the message's text
+     * @returns {String}
+     */
     checkLength: function (message) {
       if (message.length <= 50) {
         return 'smaller'
@@ -53,15 +34,41 @@ export default {
         return 'bigger'
       }
     },
+    /**
+     * Generates a random index do get a random color from colors array
+     * @returns {Number}
+     */
     randColor: function () {
       var rand = Math.floor(Math.random() * this.bgcolor.length)
       return rand
     },
+    /**
+     * Makes a new tweet
+     * @returns {Object}
+     */
     makeNewTweet: function (e) {
       var newTweet = {}
       newTweet.message = this.new_tweet
-      this.tweets.push(newTweet)
-      this.new_tweet = ''
+      HomeServices.PostTweet(this.$axios, {tweet: this.new_tweet})
+        .then(res => {
+          console.log(' enviado ', res)
+        }).catch(err => {
+          console.error('ERRO ', err)
+        })
+    },
+    /**
+     * Get the stored tweets 
+     * @param {Object} tweet text
+     * @returns {Object}
+     */
+    bringMyTweets: function () {
+      HomeServices.Get(this.$axios)
+        .then(res => {
+          console.log('so what?', res.data)
+          this.tweets = res.data
+        }).catch(err => {
+          console.error('ERRO ', err)
+        })
     }
   }
 }
