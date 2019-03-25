@@ -18,6 +18,7 @@
         </footer>
       </form>
     </article>
+    <toaster ref="newTweet" text="Mensagem enviada com sucesso!" :is_show="new_tweet_success" />
     <ul class="tweetlist">
       <li v-for="(tweet, index) in tweets.data" :key="index" :style="{'backgroundColor': tweet.color}" @click="messages_sent++">
         <div :class="checkLength(tweet.tweet)">

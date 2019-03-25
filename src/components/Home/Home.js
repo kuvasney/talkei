@@ -1,7 +1,10 @@
 import HomeServices from '@/services/home.js'
+import Toaster from '@/includes/toaster'
 export default {
   name: 'Home',
-  components: {},
+  components: {
+    Toaster
+  },
   data () {
     return {
       twitter_url: '',
@@ -15,6 +18,7 @@ export default {
       new_tweet: '',
       messages_sent: 0,
       isLoading: false,
+      new_tweet_success: false
     }
   },
   methods: {    
@@ -72,10 +76,20 @@ export default {
       HomeServices.PostTweet(this.$axios, {tweet: this.new_tweet})
         .then(res => {
           console.log(' enviado ', res)
-          this.bringMyTweets()
+          newTweet.message = ''
+          this.addNewTweet = false
+
+          this.$nextTick(() => {
+            this.bringMyTweets()
+          });
+
+          this.new_tweet_success = true
+          setTimeout(() => {this.new_tweet_success = false}, 3000)
+
         }).catch(err => {
           console.error('ERRO ', err)
         })
+
     },
     /**
      * Get the stored tweets 
