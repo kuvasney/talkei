@@ -173,3 +173,18 @@ li {
     font-size: 0.8em;
   }
 }
+
+.loading {
+  width: 100%;
+  display: inline-block;
+  color: #C00;
+  position: relative;
+  font-size: 6em;
+  text-align: center;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

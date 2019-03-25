@@ -4,8 +4,8 @@ function Factory () {
    * @param {axios} actions
    * @return {object} request
    */
-  this.Get = (axios, query) => {
-    const request = axios.get(`http://www.talkei.net/retrieve`)
+  this.Get = (axios, page = 1) => {
+    const request = axios.get(`http://www.talkei.net/retrieve?page=${page}`)
 
     return request
   }
@@ -16,8 +16,8 @@ function Factory () {
    * @return {object} request
    */
   this.PostTweet = (axios, params) => {
-    const request = axios.get(`https://www.talkei.net/store`, params)
-    
+    const request = axios.post(`https://www.talkei.net/store`, params)
+
     return request
   }
 }

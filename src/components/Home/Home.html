@@ -19,11 +19,10 @@
       </form>
     </article>
     <ul class="tweetlist">
-      <li v-for="(tweet, index) in tweets" :key="index" :style="{'backgroundColor': bgcolor[randColor()]}" @click="messages_sent++">
+      <li v-for="(tweet, index) in tweets.data" :key="index" :style="{'backgroundColor': tweet.color}" @click="messages_sent++">
         <div :class="checkLength(tweet.tweet)">
           <a :href="`https://twitter.com/intent/tweet?screen_name=jairbolsonaro&button_hashtag=TALKEI&text=${tweet.tweet}`">{{ tweet.tweet }}</a>
         </div>
-        <!-- <em>{{ checkLength(tweet.message) }} - {{tweet.message.length}}</em> -->
       </li>
       <li class="separator"></li>
       <li class="counter">
@@ -32,6 +31,8 @@
         </div>
       </li>
     </ul>
-    <a @click="bringMyTweets()">Get Me</a>
+    <span class="loading" v-if="isLoading">
+      🤬
+    </span>
   </section>
 </div>
