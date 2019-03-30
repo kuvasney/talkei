@@ -9,26 +9,20 @@
     <article class="add-new-tweet" v-show="addNewTweet">
       <form @submit.prevent="makeNewTweet($event)">
         <div>
-          <!-- <textarea name="new-tweet" cols="30" rows="10" class="emojiOk" v-model="new_tweet"></textarea> -->
-          <div id="tweetmessage" class="textmessage emojiOk" placeholder="#talkei @jairbolsonaro" contenteditable="true"
-            @keyup="updateText($event)" />
-          <span class="count_tweet">{{ tweet_length ? tweet_length : '' }}</span>
-          <emojis @emoji="insertEmoji" />
+          <textarea name="new-tweet" cols="30" rows="10" v-model="new_tweet"></textarea>
+          <span class="count_tweet">{{ 256 - new_tweet.length }}</span>
         </div>
         <footer class="button">
-          <p class="disclaimer">Fique tranquilo, tudo aqui é anônimo. Não queremos saber o seu nome ou dados pessoais
-          </p>
-          <button :disabled="!tweet_length || tweet_length > 256">Enviar</button>
+          <p class="disclaimer">Fique tranquilo, tudo aqui é anônimo. Não queremos saber o seu nome ou dados pessoais</p>
+          <button :disabled="new_tweet.length < 1 || new_tweet.length > 255">Enviar</button>
         </footer>
       </form>
     </article>
     <toaster ref="newTweet" text="Mensagem enviada com sucesso!" :is_show="new_tweet_success" />
     <ul class="tweetlist">
-      <li v-for="(tweet, index) in tweets.data" :key="index" :style="{'backgroundColor': tweet.color}"
-        @click="messages_sent++">
+      <li v-for="(tweet, index) in tweets.data" :key="index" :style="{'backgroundColor': tweet.color}" @click="messages_sent++">
         <div :class="checkLength(tweet.tweet)">
-          <a
-            :href="`https://twitter.com/intent/tweet?screen_name=jairbolsonaro&button_hashtag=TALKEI&text=${tweet.tweet}`">{{ tweet.tweet }}</a>
+          <a :href="`https://twitter.com/intent/tweet?screen_name=jairbolsonaro&button_hashtag=TALKEI&text=${tweet.tweet}`">{{ tweet.tweet }}</a>
         </div>
       </li>
       <li class="separator"></li>
