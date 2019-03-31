@@ -38,13 +38,16 @@ export default {
 
 header {
   background: #fff url("assets/talkei-topo.jpg") no-repeat top right;
-  background-size: auto 100%;
   color: #3a3a3a;
   padding-bottom: 50px;
 
   @include respond-to("small") {
     background-size: auto 50%;
     background-position: center right;
+  }
+  @include respond-to("medium") {
+    background-size: auto 100%;
+    background-position: bottom right;
   }
 }
 h1 {

@@ -9,7 +9,6 @@
     <article class="add-new-tweet" v-show="addNewTweet">
       <form @submit.prevent="makeNewTweet($event)">
         <div>
-          <!-- <textarea name="new-tweet" cols="30" rows="10" class="emojiOk" v-model="new_tweet"></textarea> -->
           <div id="tweetmessage" class="textmessage emojiOk" placeholder="#talkei @jairbolsonaro" contenteditable="true"
             @keyup="updateText($event)" />
           <span class="count_tweet">{{ tweet_length ? tweet_length : '' }}</span>
@@ -31,15 +30,19 @@
             :href="`https://twitter.com/intent/tweet?screen_name=jairbolsonaro&button_hashtag=TALKEI&text=${tweet.tweet}`">{{ tweet.tweet }}</a>
         </div>
       </li>
-      <li class="separator"></li>
+      <li class="separator" />
+      <li class="loading" v-if="isLoading">
+        🍊
+      </li>
       <li class="counter">
         <div>
           {{ messages_sent }} Tweets enviados até o momento
         </div>
       </li>
     </ul>
-    <span class="loading" v-if="isLoading">
-      🤬
-    </span>
+    <div class="console" v-if="toDebug">
+      <p>{{ mobilecheck() }}</p>
+      <p>{{ toDebug }}</p>
+    </div>
   </section>
 </div>

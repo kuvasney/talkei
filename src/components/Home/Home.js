@@ -9,22 +9,34 @@ export default {
   },
   data() {
     return {
-      twitter_url: '',
+      //THE TWEET LIST
       tweets: {},
+      //THE TWEET LENGTH
       tweet_length: '',
-      tweet_list: {},
+      //BOXES COLORS ARRAY
       bgcolor: [
         '#d1c9dd', '#e7235a', '#514d68', '#962f90', '#95c623', '#0e4749', '#e55812', '#1d0e40', '#002626', '#2274a5', '#31abb2', '#4c5b5c', '#644536', '#29bf12'
       ],
+      //INDEXER FOR COLOR ARRAY
       index_color: 1,
+      //SHOW OR HIDE NEW TWEET FORM
       addNewTweet: false,
+      //NEW TWEET TO SAVE
       new_tweet: {},
+      //TWEETS COUNTER
       messages_sent: 0,
+      //TWEET SAVED
+      new_tweet_success: false,
+      //PRELOADER
       isLoading: false,
-      new_tweet_success: false
+      //DEBUGGER
+      toDebug: false
     }
   },
   methods: {
+    mobilecheck () {
+      return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1)
+    },
     /**
      * Checks the lenght of each tweet
      * @param {String} the message's text
@@ -48,7 +60,6 @@ export default {
      * @returns {Number}
      */
     randColor() {
-      // let rand = Math.floor(Math.random() * this.bgcolor.length)
       let rand = this.messages_sent++
       return rand
     },
@@ -59,26 +70,20 @@ export default {
         this.index_color = 1
       }
       return this.bgcolor[this.index_color]
-      // let colour = 1
-      // if (index > this.bgcolor.length) {
-      //   colour = Math.floor(Math.random() * this.bgcolor.length)
-      // } else {
-      //   colour = index
-      // }
-      // return colour
     },
     /**
      * Makes a new tweet
      * @returns {Object}
      */
     makeNewTweet(e) {
-      console.log('this.new_tweet', this.new_tweet)
+      console.log('this.new_tweet', this.new_tweet.innerText)
       const newTweet = {}
       newTweet.message = this.new_tweet
-      HomeServices.PostTweet(this.$axios, { tweet: this.new_tweet })
+      HomeServices.PostTweet(this.$axios, { tweet: this.new_tweet.innerText })
         .then(res => {
           console.log(' enviado ', res)
           newTweet.message = ''
+          this.new_tweet.innerText = ''
           this.addNewTweet = false
 
           this.$nextTick(() => {
@@ -97,7 +102,7 @@ export default {
      * Get the stored tweets
      * @param {Object} tweet text
      * @returns {Object}
-     */
+    */
     bringMyTweets() {
       var _this = this
       this.isLoading = true
@@ -138,21 +143,33 @@ export default {
         })
       }
     },
+    /**
+     * Get contenteditable div length
+     * @param {Object} event
+    */
     updateText(e) {
       this.new_tweet = e.target
       this.tweet_length = e.target.innerText.length
-      // console.log(this.new_tweet.innerText.length)
     },
+    /**
+     * Append an emoji to contenteditable div
+     * @param {Object} emoji
+    */
     insertEmoji(emoji) {
       var area = document.querySelector('.emojiOk')
-      console.log(emoji)
       area.append(emoji.char)
-      console.log(area)
     },
-    scroll() {
+    /**
+     * Events on page scroll
+    */
+    scroller() {
+      let bottomOfWindow;
       window.onscroll = () => {
-        let bottomOfWindow = Math.max(window.pageYOffset, document.documentElement.scrollTop, document.body.scrollTop) + window.innerHeight === document.documentElement.offsetHeight
-
+        if (this.mobilecheck()) {
+          bottomOfWindow = Math.round(document.documentElement.scrollTop + window.innerHeight + 200)  >= document.documentElement.offsetHeight
+        } else {
+          bottomOfWindow = Math.round(document.documentElement.scrollTop + window.innerHeight) === document.documentElement.offsetHeight
+        }
         if (bottomOfWindow) {
           this.bringMyTweets()
         }
@@ -160,13 +177,13 @@ export default {
     },
     /**
      * The initial methods
-    */
+     */
     ready() {
       this.bringMyTweets()
-      this.scroll()
     }
   },
   mounted() {
+    this.scroller()
     this.ready()
   }
 }
