@@ -9,11 +9,19 @@ export default {
   data () {
     return {
       emojiList: EmojiList,
-      toShow: false
+      toShow: false,
+      emojiSearch: ''
+    }
+  },
+  computed: {
+    filteredList() {
+      return this.emojiList.filter(emoji => {
+        return emoji.keywords.toLowerCase().includes(this.emojiSearch.toLowerCase())
+      })
     }
   },
   methods: {
-    emojiSent: function (emoji) {
+    emojiSent (emoji) {
       this.$emit('emoji', emoji)
     }
   }

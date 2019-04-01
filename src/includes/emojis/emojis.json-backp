@@ -2800,6 +2800,237 @@
     "keywords": "couple | kiss"
   },
   {
+    "no": 401,
+    "codes": "1F469 200D 2764 FE0F 200D 1F48B 200D 1F468",
+    "char": "👩‍❤️‍💋‍👨",
+    "name": "kiss: woman, man",
+    "keywords": "couple | kiss | man | woman"
+  },
+  {
+    "no": 402,
+    "codes": "1F468 200D 2764 FE0F 200D 1F48B 200D 1F468",
+    "char": "👨‍❤️‍💋‍👨",
+    "name": "kiss: man, man",
+    "keywords": "couple | kiss | man"
+  },
+  {
+    "no": 403,
+    "codes": "1F469 200D 2764 FE0F 200D 1F48B 200D 1F469",
+    "char": "👩‍❤️‍💋‍👩",
+    "name": "kiss: woman, woman",
+    "keywords": "couple | kiss | woman"
+  },
+  {
+    "no": 404,
+    "codes": "1F491",
+    "char": "💑",
+    "name": "couple with heart",
+    "keywords": "couple | couple with heart | love"
+  },
+  {
+    "no": 405,
+    "codes": "1F469 200D 2764 FE0F 200D 1F468",
+    "char": "👩‍❤️‍👨",
+    "name": "couple with heart: woman, man",
+    "keywords": "couple | couple with heart | love | man | woman"
+  },
+  {
+    "no": 406,
+    "codes": "1F468 200D 2764 FE0F 200D 1F468",
+    "char": "👨‍❤️‍👨",
+    "name": "couple with heart: man, man",
+    "keywords": "couple | couple with heart | love | man"
+  },
+  {
+    "no": 407,
+    "codes": "1F469 200D 2764 FE0F 200D 1F469",
+    "char": "👩‍❤️‍👩",
+    "name": "couple with heart: woman, woman",
+    "keywords": "couple | couple with heart | love | woman"
+  },
+  {
+    "no": 408,
+    "codes": "1F46A",
+    "char": "👪",
+    "name": "family",
+    "keywords": "family"
+  },
+  {
+    "no": 409,
+    "codes": "1F468 200D 1F469 200D 1F466",
+    "char": "👨‍👩‍👦",
+    "name": "family: man, woman, boy",
+    "keywords": "boy | family | man | woman"
+  },
+  {
+    "no": 410,
+    "codes": "1F468 200D 1F469 200D 1F467",
+    "char": "👨‍👩‍👧",
+    "name": "family: man, woman, girl",
+    "keywords": "family | girl | man | woman"
+  },
+  {
+    "no": 411,
+    "codes": "1F468 200D 1F469 200D 1F467 200D 1F466",
+    "char": "👨‍👩‍👧‍👦",
+    "name": "family: man, woman, girl, boy",
+    "keywords": "boy | family | girl | man | woman"
+  },
+  {
+    "no": 412,
+    "codes": "1F468 200D 1F469 200D 1F466 200D 1F466",
+    "char": "👨‍👩‍👦‍👦",
+    "name": "family: man, woman, boy, boy",
+    "keywords": "boy | family | man | woman"
+  },
+  {
+    "no": 413,
+    "codes": "1F468 200D 1F469 200D 1F467 200D 1F467",
+    "char": "👨‍👩‍👧‍👧",
+    "name": "family: man, woman, girl, girl",
+    "keywords": "family | girl | man | woman"
+  },
+  {
+    "no": 414,
+    "codes": "1F468 200D 1F468 200D 1F466",
+    "char": "👨‍👨‍👦",
+    "name": "family: man, man, boy",
+    "keywords": "boy | family | man"
+  },
+  {
+    "no": 415,
+    "codes": "1F468 200D 1F468 200D 1F467",
+    "char": "👨‍👨‍👧",
+    "name": "family: man, man, girl",
+    "keywords": "family | girl | man"
+  },
+  {
+    "no": 416,
+    "codes": "1F468 200D 1F468 200D 1F467 200D 1F466",
+    "char": "👨‍👨‍👧‍👦",
+    "name": "family: man, man, girl, boy",
+    "keywords": "boy | family | girl | man"
+  },
+  {
+    "no": 417,
+    "codes": "1F468 200D 1F468 200D 1F466 200D 1F466",
+    "char": "👨‍👨‍👦‍👦",
+    "name": "family: man, man, boy, boy",
+    "keywords": "boy | family | man"
+  },
+  {
+    "no": 418,
+    "codes": "1F468 200D 1F468 200D 1F467 200D 1F467",
+    "char": "👨‍👨‍👧‍👧",
+    "name": "family: man, man, girl, girl",
+    "keywords": "family | girl | man"
+  },
+  {
+    "no": 419,
+    "codes": "1F469 200D 1F469 200D 1F466",
+    "char": "👩‍👩‍👦",
+    "name": "family: woman, woman, boy",
+    "keywords": "boy | family | woman"
+  },
+  {
+    "no": 420,
+    "codes": "1F469 200D 1F469 200D 1F467",
+    "char": "👩‍👩‍👧",
+    "name": "family: woman, woman, girl",
+    "keywords": "family | girl | woman"
+  },
+  {
+    "no": 421,
+    "codes": "1F469 200D 1F469 200D 1F467 200D 1F466",
+    "char": "👩‍👩‍👧‍👦",
+    "name": "family: woman, woman, girl, boy",
+    "keywords": "boy | family | girl | woman"
+  },
+  {
+    "no": 422,
+    "codes": "1F469 200D 1F469 200D 1F466 200D 1F466",
+    "char": "👩‍👩‍👦‍👦",
+    "name": "family: woman, woman, boy, boy",
+    "keywords": "boy | family | woman"
+  },
+  {
+    "no": 423,
+    "codes": "1F469 200D 1F469 200D 1F467 200D 1F467",
+    "char": "👩‍👩‍👧‍👧",
+    "name": "family: woman, woman, girl, girl",
+    "keywords": "family | girl | woman"
+  },
+  {
+    "no": 424,
+    "codes": "1F468 200D 1F466",
+    "char": "👨‍👦",
+    "name": "family: man, boy",
+    "keywords": "boy | family | man"
+  },
+  {
+    "no": 425,
+    "codes": "1F468 200D 1F466 200D 1F466",
+    "char": "👨‍👦‍👦",
+    "name": "family: man, boy, boy",
+    "keywords": "boy | family | man"
+  },
+  {
+    "no": 426,
+    "codes": "1F468 200D 1F467",
+    "char": "👨‍👧",
+    "name": "family: man, girl",
+    "keywords": "family | girl | man"
+  },
+  {
+    "no": 427,
+    "codes": "1F468 200D 1F467 200D 1F466",
+    "char": "👨‍👧‍👦",
+    "name": "family: man, girl, boy",
+    "keywords": "boy | family | girl | man"
+  },
+  {
+    "no": 428,
+    "codes": "1F468 200D 1F467 200D 1F467",
+    "char": "👨‍👧‍👧",
+    "name": "family: man, girl, girl",
+    "keywords": "family | girl | man"
+  },
+  {
+    "no": 429,
+    "codes": "1F469 200D 1F466",
+    "char": "👩‍👦",
+    "name": "family: woman, boy",
+    "keywords": "boy | family | woman"
+  },
+  {
+    "no": 430,
+    "codes": "1F469 200D 1F466 200D 1F466",
+    "char": "👩‍👦‍👦",
+    "name": "family: woman, boy, boy",
+    "keywords": "boy | family | woman"
+  },
+  {
+    "no": 431,
+    "codes": "1F469 200D 1F467",
+    "char": "👩‍👧",
+    "name": "family: woman, girl",
+    "keywords": "family | girl | woman"
+  },
+  {
+    "no": 432,
+    "codes": "1F469 200D 1F467 200D 1F466",
+    "char": "👩‍👧‍👦",
+    "name": "family: woman, girl, boy",
+    "keywords": "boy | family | girl | woman"
+  },
+  {
+    "no": 433,
+    "codes": "1F469 200D 1F467 200D 1F467",
+    "char": "👩‍👧‍👧",
+    "name": "family: woman, girl, girl",
+    "keywords": "family | girl | woman"
+  },
+  {
     "no": 434,
     "codes": "1F5E3",
     "char": "🗣",

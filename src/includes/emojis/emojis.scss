@@ -11,31 +11,41 @@
 
   .emojis {
     display: none;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    height: 6em;
-    padding: .3em;
     background-color: #FFF;
     overflow: auto;
     border-radius: 5px;
     border: 1px solid #0093d0;
     position: absolute;
-    top: -6.5em;
+    height: 8em;
+    top: -8.5em;
     left: -1em;
     z-index: 100;
     box-shadow: 1px 2px 5px rgba(0, 0, 0, .2);
+    padding: .3em;
 
     &.emojis--show {
-      display: flex;
+      display: block;
     }
+  }
+
+  input {
+    position: fixed;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 1.3em 0 0;
+    padding: 0;
   }
 
   li {
     font-family: 'Noto Sans', sans-serif;
     text-align: center;
     font-size: 1.5em;
-    width: 1.8em;
+    width: 2.5em;
     cursor: pointer;
     color: #000;
   }

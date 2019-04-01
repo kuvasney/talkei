@@ -12,7 +12,7 @@
           <div id="tweetmessage" class="textmessage emojiOk" placeholder="#talkei @jairbolsonaro" contenteditable="true"
             @keyup="updateText($event)" />
           <span class="count_tweet">{{ tweet_length ? tweet_length : '' }}</span>
-          <emojis @emoji="insertEmoji" />
+          <emojis @emoji="insertEmoji" v-show="!mobilecheck()" />
         </div>
         <footer class="button">
           <p class="disclaimer">Fique tranquilo, tudo aqui é anônimo. Não queremos saber o seu nome ou dados pessoais
