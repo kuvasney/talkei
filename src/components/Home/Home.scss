@@ -129,10 +129,6 @@ li {
     position: absolute;
     bottom: 0;
     right: 0;
-
-    @include respond-to('small') {
-      left: 11%
-    }
   }
 
   .count_tweet {

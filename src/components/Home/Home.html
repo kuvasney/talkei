@@ -6,18 +6,24 @@
         <span v-else>Fechar</span>
       </a>
     </p>
-    <article class="add-new-tweet" v-show="addNewTweet">
-      <form @submit.prevent="makeNewTweet($event)">
+    <article class="add-new-tweet" v-show="addNewTweet" @submit.prevent="makeNewTweet($event)">
+      <form>
+        <!--  @submit.prevent="makeNewTweet($event)" -->
         <div>
           <div id="tweetmessage" class="textmessage emojiOk" placeholder="#talkei @jairbolsonaro" contenteditable="true"
             @keyup="updateText($event)" />
-          <span class="count_tweet">{{ tweet_length ? tweet_length : '' }}</span>
+          <span class="count_tweet">{{ tweet_length < 3 ? tweet_length - 110 : '' }}</span>
           <emojis @emoji="insertEmoji" v-show="!mobilecheck()" />
         </div>
         <footer class="button">
           <p class="disclaimer">Fique tranquilo, tudo aqui é anônimo. Não queremos saber o seu nome ou dados pessoais
           </p>
-          <button :disabled="!tweet_length || tweet_length > 256">Enviar</button>
+          <vue-recaptcha
+            sitekey="6LdNAJwUAAAAABZVMWl4pSCGXhHPtZ8z5rg93wrp"
+            @verify="verifyCaptcha"
+            ref="recaptcha"
+          />
+          <button :disabled="!token && !status">Enviar</button>
         </footer>
       </form>
     </article>

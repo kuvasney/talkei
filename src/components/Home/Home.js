@@ -1,11 +1,14 @@
 import HomeServices from '@/services/home.js'
 import Toaster from '@/includes/toaster'
 import Emojis from '@/includes/emojis/emojis.vue'
+import VueRecaptcha from 'vue-recaptcha'
+
 export default {
   name: 'Home',
   components: {
     Toaster,
-    Emojis
+    Emojis,
+    VueRecaptcha
   },
   data() {
     return {
@@ -29,6 +32,10 @@ export default {
       new_tweet_success: false,
       //PRELOADER
       isLoading: false,
+      //FOR RECAPTCHA
+      status: false,
+      serverError: '',
+      token: false,
       //DEBUGGER
       toDebug: false
     }
@@ -76,15 +83,20 @@ export default {
      * @returns {Object}
      */
     makeNewTweet(e) {
-      console.log('this.new_tweet', this.new_tweet.innerText)
+      if (this.tweet_length || this.tweet_length > 110) {
+        return false
+      }
       const newTweet = {}
       newTweet.message = this.new_tweet
-      HomeServices.PostTweet(this.$axios, { tweet: this.new_tweet.innerText })
+      HomeServices.PostTweet(this.$axios, {
+        tweet: this.new_tweet.innerText })
         .then(res => {
           console.log(' enviado ', res)
           newTweet.message = ''
           this.new_tweet.innerText = ''
           this.addNewTweet = false
+          // this.$refs.recaptcha.reset()
+          // this.status = false
 
           this.$nextTick(() => {
             this.bringMyTweets()
@@ -95,8 +107,23 @@ export default {
 
         }).catch(err => {
           console.error('ERRO ', err)
-        })
+          this.serverError = getErrorMessage(err);
 
+          //helper to get a displayable message to the user
+          function getErrorMessage(err) {
+            let responseBody
+            responseBody = err.response
+            if (!responseBody) {
+              responseBody = err
+            }
+            else {
+              responseBody = err.response.data || responseBody
+            }
+            return responseBody.message || JSON.stringify(responseBody)
+          }
+        }).then(() => {
+          self.status = ""
+        })
     },
     /**
      * Get the stored tweets
@@ -150,6 +177,12 @@ export default {
     updateText(e) {
       this.new_tweet = e.target
       this.tweet_length = e.target.innerText.length
+
+      if (this.tweet_length || this.tweet_length > 110) {
+        this.status = false
+      } else {
+        this.status = true
+      }
     },
     /**
      * Append an emoji to contenteditable div
@@ -176,6 +209,16 @@ export default {
       }
     },
     /**
+     * Recaptcha by Google
+     */
+    verifyCaptcha(token) {
+      this.token = token
+      console.log('captcha', token)
+      if (token) {
+        this.status = true
+      }
+    },
+    /**
      * The initial methods
      */
     ready() {
@@ -185,5 +228,6 @@ export default {
   mounted() {
     this.scroller()
     this.ready()
+    console.log(this.status)
   }
 }

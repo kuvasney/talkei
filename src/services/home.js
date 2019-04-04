@@ -5,7 +5,7 @@ function Factory () {
    * @return {object} request
    */
   this.Get = (axios, page = 1) => {
-    const request = axios.get(`http://www.talkei.net/retrieve?page=${page}`)
+    const request = axios.get(`https://www.talkei.net/retrieve?page=${page}`)
 
     return request
   }
