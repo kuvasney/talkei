@@ -11,18 +11,21 @@
         <!--  @submit.prevent="makeNewTweet($event)" -->
         <div>
           <div id="tweetmessage" class="textmessage emojiOk" placeholder="#talkei @jairbolsonaro" contenteditable="true"
-            @keyup="updateText($event)" />
+            @keyup="updateText($event)">
+            </div>
           <span class="count_tweet">{{ tweet_length < 3 ? tweet_length - 110 : '' }}</span>
           <emojis @emoji="insertEmoji" v-show="!mobilecheck()" />
         </div>
-        <footer class="button">
-          <p class="disclaimer">Fique tranquilo, tudo aqui é anônimo. Não queremos saber o seu nome ou dados pessoais
-          </p>
+        <section class="recaptcha">
           <vue-recaptcha
             sitekey="6LdNAJwUAAAAABZVMWl4pSCGXhHPtZ8z5rg93wrp"
             @verify="verifyCaptcha"
             ref="recaptcha"
           />
+        </section>
+        <footer class="button">
+          <p class="disclaimer">Fique tranquilo, tudo aqui é anônimo. Não queremos saber o seu nome ou dados pessoais
+          </p>
           <button :disabled="!token && !status">Enviar</button>
         </footer>
       </form>
@@ -37,8 +40,8 @@
         </div>
       </li>
       <li class="separator" />
-      <li class="loading" v-if="isLoading">
-        🍊
+      <li v-if="isLoading">
+        <span class="loading">🍊</span>
       </li>
       <li class="counter">
         <div>
