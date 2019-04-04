@@ -12,7 +12,7 @@
   .emojis {
     display: none;
     background-color: #FFF;
-    overflow: auto;
+    overflow: hidden;
     border-radius: 5px;
     border: 1px solid #0093d0;
     position: absolute;
@@ -29,7 +29,7 @@
   }
 
   input {
-    position: fixed;
+    position: absolute;
   }
 
   ul {
@@ -39,6 +39,9 @@
     align-items: center;
     margin: 1.3em 0 0;
     padding: 0;
+    height: 8.5em;
+    overflow: auto;
+    width: 13em;
   }
 
   li {
