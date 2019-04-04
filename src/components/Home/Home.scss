@@ -44,15 +44,27 @@ li {
   vertical-align: middle;
   padding: 2%;
   position: relative;
+  width: 100%;
+  height: 50vh;
 
   @include respond-to('small') {
     width: 100%;
     height: 50vh;
   }
 
-  @include respond-to('medium') {
-    width: 25%;
+  @include respond-to("landscape") {
+    width: 50%;
     height: 50vh;
+  }
+
+  @include respond-to('medium') {
+    width: 50%;
+    height: 50vh;
+  }
+
+  @include respond-to('large') {
+    width: 25%;
+    height: 40vh;
   }
 
   a {

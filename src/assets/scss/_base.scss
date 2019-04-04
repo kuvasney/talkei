@@ -1,7 +1,9 @@
 $breakpoints: (
-  "small": 360px,
-  "medium": 992px,
-  "large": 1200px
+  "small": 320px,
+  "landscape": 412px,
+  "medium": 768px,
+  "large": 1024px,
+  "larger": 1200px
 ) !default;
 
 /// Mixin to manage responsive breakpoints

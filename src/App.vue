@@ -2,16 +2,13 @@
   <div id="app">
     <header>
       <h1>
-        Saudações ao nosso
-        <em>grande</em> presidente, talkei!
+        Envie uma saudação direto para nosso <em>grande</em> presidente.
       </h1>
       <h2>
-        Clique na mensagem que quer enviar para o twitter do
-        <a
-          href="https://twitter.com/jairbolsonaro"
-        >@jairbolsonaro</a>
+        Para exercer sua liberdade de expressão basta clicar em uma mensagem abaixo e o twitter abrirá automaticamente com a mensagem e o handler do presidente, <em>talkei</em>!?
       </h2>
-      <div class="sharethis-inline-share-buttons"></div>
+      <span class="character" />
+      <div class="sharethis-inline-share-buttons" />
     </header>
     <router-view/>
   </div>
@@ -31,33 +28,88 @@ export default {
 }
 
 #app {
-  max-width: 1024px;
+  // max-width: 1024px;
   margin: 0 auto;
   background-color: #c8c8c8;
 }
 
 header {
-  background: #fff url("assets/talkei-topo.jpg") no-repeat top right;
+  background:transparent url("assets/talkei-topo-bg.png");
   color: #3a3a3a;
   padding-bottom: 50px;
+  position: relative;
+  padding: 1em;
+  min-height: 55vh;
 
   @include respond-to("small") {
-    background-size: auto 50%;
-    background-position: center right;
   }
   @include respond-to("medium") {
-    background-size: auto 100%;
-    background-position: bottom right;
+  }
+  @include respond-to("large") {
+  }
+
+
+  .character {
+    background: url("assets/talkei-topo.png") no-repeat top right;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    background-size: 100% auto;
+    height: 100%;
+
+    @include respond-to("small") {
+      // background-size: 100% auto;
+      background-position: bottom right;
+    }
+    @include respond-to("landscape") {
+      background-size: auto 100%;
+      background-position: bottom right;
+    }
+    @include respond-to("medium") {
+      height: 100%;
+      background-position: bottom right;
+    }
+    @include respond-to("large") {
+      // background-size: auto 50%;
+      background-position: bottom right;
+      height: 100%;
+    }
+    @include respond-to("larger") {
+      // background-size: auto 100%;
+      background-position: bottom right;
+    }
   }
 }
+
 h1 {
-  font-size: 8vh;
+  font-size: 5vh;
   width: 50%;
   margin-bottom: 50px;
+  position: relative;
+  z-index: 100;
 
   @include respond-to("small") {
     font-size: 5vh;
-    width: 90%;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  @include respond-to("landscape") {
+    font-size: 8vh;
+    margin-bottom: 10px;
+    width: 50%;
+  }
+  @include respond-to("medium") {
+    font-size: 6vh;
+    margin-bottom: 10px;
+  }
+  @include respond-to("large") {
+    font-size: 6vh;
+    margin-bottom: 10px;
+  }
+  @include respond-to("larger") {
+    font-size: 10vh;
     margin-bottom: 10px;
   }
 }
@@ -66,10 +118,21 @@ h2 {
   width: 50%;
   font-weight: normal;
   font-size: 4vh;
-  margin-bottom: 50px;
 
   @include respond-to("small") {
-    font-size: 3vh;
+    font-size: 2vh;
+  }
+  @include respond-to("landscape") {
+    font-size: 5vh;
+  }
+  @include respond-to("medium") {
+    font-size: 2.5vh;
+  }
+  @include respond-to("large") {
+    font-size: 2.5vh;
+  }
+  @include respond-to("larger") {
+    font-size: 7vh;
   }
 }
 
