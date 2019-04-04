@@ -8,13 +8,14 @@
     </p>
     <article class="add-new-tweet" v-show="addNewTweet" @submit.prevent="makeNewTweet($event)">
       <form>
-        <!--  @submit.prevent="makeNewTweet($event)" -->
-        <div>
-          <div id="tweetmessage" class="textmessage emojiOk" placeholder="#talkei @jairbolsonaro" contenteditable="true"
+        <div class="add-new-tweet__wrapper">
+          <legend>Em sua mensagem será adicionado o @jairbolsonaro e nossa hashtah #TALKEI</legend>
+          <div id="tweetmessage" class="textmessage emojiOk" placeholder="#talkei @jairbolsonaro" contenteditable="true" :class="{'error':tweet_length > 110}"
             @keyup="updateText($event)">
             </div>
-          <span class="count_tweet">{{ tweet_length < 3 ? tweet_length - 110 : '' }}</span>
+          <em class="count_tweet" :class="{'error':tweet_length > 110}">{{ tweet_length ? tweet_length - 110 : '110' }}</em>
           <emojis @emoji="insertEmoji" v-show="!mobilecheck()" />
+          <p class="error" v-if="tweet_length > 110">Sua mensagem deve conter até 110 caracteres</p>
         </div>
         <section class="recaptcha">
           <vue-recaptcha

@@ -122,31 +122,41 @@ li {
   background-color: #def4fa;
   padding: 20px 0;
 
-  div {
+  .add-new-tweet__wrapper {
     position: relative;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  legend {
+    color: #59cef2;
+    font-size: 0.8em;
   }
 
   .textmessage {
     background-color: #fff;
     border: 2px solid #59cef2;
     border-radius: 5px;
-    width: 80%;
     min-height:  140px;
     height: auto;
-    margin: 20px auto;
+    margin: 20px 0;
     display: block;
+
+    &.error {
+      color: red
+    }
   }
 
   .c-emojis {
     position: absolute;
     bottom: 0;
-    right: 0;
+    left: 10px;
   }
 
   .count_tweet {
     position: absolute;
     bottom: 5px;
-    right: 12%;
+    right: 10px;
     font-size: 0.8em;
     color: #999;
   }
@@ -217,6 +227,10 @@ li {
   }
 }
 
+.error {
+  color: red !important;
+}
+
 .console {
   position: fixed;
   background-color: #000;
@@ -226,3 +240,4 @@ li {
   top: 0;
   left: 0;
 }
+

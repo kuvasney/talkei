@@ -132,7 +132,7 @@ h2 {
     font-size: 2.5vh;
   }
   @include respond-to("larger") {
-    font-size: 7vh;
+    font-size: 5vh;
   }
 }
 
