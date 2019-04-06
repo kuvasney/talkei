@@ -11,6 +11,34 @@
       <div class="sharethis-inline-share-buttons" />
     </header>
     <router-view/>
+    <footer class="app__footer">
+      <p><img src="@/assets/open_source.png" alt="Open Source" class="opensource"> <span class="hidemob">2019 Open Source.</span></p>
+      <ul class="linklist">
+        <li>
+          <a href="">
+            Termos
+          </a>
+        </li>
+        <li>
+          <a href="">
+            Privacidade
+          </a>
+        </li>
+        <!-- <li>
+          <a href="">
+            Open Source
+          </a>
+        </li> -->
+      </ul>
+      <p>
+        <a href="">
+          <img src="@/assets/github.png" alt="Github" class="github">
+        </a>
+      </p>
+      <p class="madewluv">
+        Made with <i>❤</i> in <b>Brazil</b>
+      </p>
+    </footer>
   </div>
 </template>
 
@@ -139,4 +167,95 @@ h2 {
 ul {
   list-style: none;
 }
+
+.app__footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10vh;
+  background-color: #e8e8e8;
+  padding: 0 10px;
+
+  * {
+    margin: 0;
+    padding: 0 ;
+  }
+
+  p {
+    line-height: 2em;
+  }
+
+  .github {
+    height: 2em;
+    width: auto;
+
+    @media (max-width: "420px") {
+      height: 1em;
+    }
+  }
+}
+
+.opensource {
+  width: auto;
+  height: 2em;
+  margin-right: 10px;
+  display: block;
+  float: left;
+
+  @media (max-width: "420px") {
+    height: 1em;
+    margin-right: 5px;
+  }
+}
+
+.linklist {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  align-items: center;
+  margin-left: 20px;
+
+  @media (max-width: "420px") {
+      margin-left: 10px;
+    }
+
+  li {
+    margin-right: 15px;
+
+    @media (max-width: "420px") {
+      font-size: .7em;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: #397eaa;
+  }
+}
+
+.madewluv {
+  margin-left: 20px;
+
+  i {
+    font-style: normal;
+    color: red;
+    font-size: 1.5em;
+  }
+
+  @media (max-width: "420px") {
+    font-size: .7em;
+  }
+}
+
+.hidemob {
+
+  @media (max-width: "420px") {
+    display: none;
+  }
+}
+
 </style>

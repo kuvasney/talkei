@@ -83,7 +83,7 @@ export default {
      * @returns {Object}
      */
     makeNewTweet(e) {
-      if (this.tweet_length || this.tweet_length > 110) {
+      if (this.tweet_length < 3 || this.tweet_length > 110) {
         return false
       }
       const newTweet = {}
@@ -95,8 +95,9 @@ export default {
           newTweet.message = ''
           this.new_tweet.innerText = ''
           this.addNewTweet = false
-          // this.$refs.recaptcha.reset()
-          // this.status = false
+          this.$refs.recaptcha.reset()
+          this.status = false
+          this.token = null
 
           this.$nextTick(() => {
             this.bringMyTweets()
@@ -121,8 +122,6 @@ export default {
             }
             return responseBody.message || JSON.stringify(responseBody)
           }
-        }).then(() => {
-          self.status = ""
         })
     },
     /**
@@ -178,11 +177,11 @@ export default {
       this.new_tweet = e.target
       this.tweet_length = e.target.innerText.length
 
-      if (this.tweet_length || this.tweet_length > 110) {
-        this.status = false
-      } else {
-        this.status = true
-      }
+      // if (this.tweet_length < 3 || this.tweet_length > 110) {
+      //   this.status = false
+      // } else {
+      //   this.status = true
+      // }
     },
     /**
      * Append an emoji to contenteditable div

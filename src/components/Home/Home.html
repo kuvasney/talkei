@@ -9,7 +9,7 @@
     <article class="add-new-tweet" v-show="addNewTweet" @submit.prevent="makeNewTweet($event)">
       <form>
         <div class="add-new-tweet__wrapper">
-          <legend>Em sua mensagem será adicionado o @jairbolsonaro e nossa hashtah #TALKEI</legend>
+          <legend>Em sua mensagem será adicionado o @jairbolsonaro e nossa hashtag #TALKEI</legend>
           <div id="tweetmessage" class="textmessage emojiOk" placeholder="#talkei @jairbolsonaro" contenteditable="true" :class="{'error':tweet_length > 110}"
             @keyup="updateText($event)">
             </div>
