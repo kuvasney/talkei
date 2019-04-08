@@ -36,6 +36,8 @@ export default {
       status: false,
       serverError: '',
       token: false,
+      //MODAL
+      showOpenSource: false,
       //DEBUGGER
       toDebug: false
     }
@@ -91,7 +93,6 @@ export default {
       HomeServices.PostTweet(this.$axios, {
         tweet: this.new_tweet.innerText })
         .then(res => {
-          console.log(' enviado ', res)
           newTweet.message = ''
           this.new_tweet.innerText = ''
           this.addNewTweet = false
@@ -198,9 +199,11 @@ export default {
       let bottomOfWindow;
       window.onscroll = () => {
         if (this.mobilecheck()) {
-          bottomOfWindow = Math.round(document.documentElement.scrollTop + window.innerHeight + 200)  >= document.documentElement.offsetHeight
+          // bottomOfWindow = Math.round(document.documentElement.scrollTop + window.innerHeight + 200)  >= document.documentElement.offsetHeight
+          bottomOfWindow = document.documentElement.scrollTop + window.innerHeight + 100 >= document.documentElement.offsetHeight
+
         } else {
-          bottomOfWindow = Math.round(document.documentElement.scrollTop + window.innerHeight) === document.documentElement.offsetHeight
+          bottomOfWindow = document.documentElement.scrollTop + window.innerHeight === document.documentElement.offsetHeight
         }
         if (bottomOfWindow) {
           this.bringMyTweets()
@@ -212,7 +215,6 @@ export default {
      */
     verifyCaptcha(token) {
       this.token = token
-      console.log('captcha', token)
       if (token) {
         this.status = true
       }
@@ -227,6 +229,5 @@ export default {
   mounted() {
     this.scroller()
     this.ready()
-    console.log(this.status)
   }
 }

@@ -12,7 +12,9 @@
     </header>
     <router-view/>
     <footer class="app__footer">
-      <p><img src="@/assets/open_source.png" alt="Open Source" class="opensource"> <span class="hidemob">2019 Open Source.</span></p>
+      <p @click="openSourceModal()" class="open-modal">
+        <img src="@/assets/open_source.png" alt="Open Source" class="opensource"> <span class="hidemob">2019 Open Source.</span>
+      </p>
       <ul class="linklist">
         <li>
           <a href="">
@@ -24,14 +26,9 @@
             Privacidade
           </a>
         </li>
-        <!-- <li>
-          <a href="">
-            Open Source
-          </a>
-        </li> -->
       </ul>
       <p>
-        <a href="">
+        <a href="https://github.com/talkei">
           <img src="@/assets/github.png" alt="Github" class="github">
         </a>
       </p>
@@ -39,12 +36,78 @@
         Made with <i>❤</i> in <b>Brazil</b>
       </p>
     </footer>
+    <modal tabindex="0" ref="openSourceModal" modaltype="window" @keyup.esc="hideModal()">
+      <div class="openSourceModal__content">
+        <img src="@/assets/license.png" alt="Open Source" class="licenseimg">
+        <h3>
+          Copyright 2019 MIT OPEN SOURCE LICENSE
+        </h3>
+        <p>É concedida permissão, a título gratuito, a qualquer pessoa que obtenha uma cópia deste software e dos arquivos de documentação associados ao software TALKEI.NET, para lidar com o software TALKEI.NET sem restrições, incluindo, sem limitação, os direitos de uso, cópia, modificação, fusão, publicação, distribuição, sublicenciamento e/ou venda de cópias do software TALKEI.NET, bem como permitir que as pessoas a quem o software TALKEI.NET é fornecido o façam, sujeitas às seguintes condições:</p>
+        <p>O aviso de copyright acima e este aviso de permissão devem ser incluídos em todas as cópias ou partes substanciais do software TALKEI.NET.</p>
+        <p>O SOFTWARE TALKEI.NET É FORNECIDO "NO ESTADO EM QUE SE ENCONTRA", SEM NENHUM TIPO DE GARANTIA, EXPRESSA OU IMPLÍCITA, INCLUINDO, MAS NÃO SE LIMITANDO ÀS GARANTIAS DE COMERCIALIZAÇÃO, ADEQUAÇÃO A UM FIM ESPECÍFICO E NÃO VIOLAÇÃO.</p>
+        <p>EM NENHUMA CIRCUNSTÂNCIA, OS AUTORES OU PROPRIETÁRIOS DE DIREITOS DE AUTOR PODERÃO SER RESPONSABILIZADOS POR QUAISQUER RECLAMAÇÕES, DANOS OU OUTRAS RESPONSABILIDADES, QUER EM AÇÕES CONTRATUAIS, DE REPARAÇÃO DE DANOS, CRIMINAIS E DE QUALQUER NATUREZA, DECORRENTES DE OU RELACIONADAS COM O SOFTWARE OU O USO OU OUTRAS NEGOCIAÇÕES NO SOFTWARE.</p>
+      </div>
+    </modal>
+    <modal tabindex="0" ref="cookiesModal" modaltype="window" @keyup.esc="hideModal()">
+      <div class="cookiesModal__content">
+        <img src="@/assets/cookie.png" alt="" class="cookie">
+        <h3>
+          Política de Cookies
+        </h3>
+        <p>
+          Este website utiliza cookies para ajudar-nos a oferecer uma melhor experiência à você durante suas visitas.
+        </p>
+        <button @click="createCookie()">
+          Aceitar
+        </button>
+      </div>
+    </modal>
   </div>
 </template>
 
 <script>
+import Modal from '@/includes/modal/modal.vue'
+
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    Modal
+  },
+  methods: {
+    /**
+     * Opens the Open Source Modal
+     */
+    openSourceModal () {
+      this.$refs.openSourceModal.showModal()
+    },
+    /**
+     * Closes the Open Source Modal
+     */
+    hideModal () {
+      this.$refs.openSourceModal.closeModal()
+    },
+    /**
+     * Creates the website cookie
+     */
+    createCookie () {
+      document.cookie = 'talkei-cookie'
+      this.$refs.cookiesModal.closeModal()
+    },
+    /**
+     * Checks if the website cookie already exists
+     */
+    checkForCookie () {
+      var carr = document.cookie.split(';')
+      if (carr.includes(' talkei-cookie', 0)) {
+        return false
+      } else {
+        this.$refs.cookiesModal.showModal()
+      }
+    }
+  },
+  mounted () {
+    this.checkForCookie()
+  }
 }
 </script>
 
@@ -69,13 +132,12 @@ header {
   padding: 1em;
   min-height: 55vh;
 
-  @include respond-to("small") {
+  @include small {
   }
-  @include respond-to("medium") {
+  @include medium {
   }
-  @include respond-to("large") {
+  @include large {
   }
-
 
   .character {
     background: url("assets/talkei-topo.png") no-repeat top right;
@@ -87,80 +149,62 @@ header {
     background-size: 100% auto;
     height: 100%;
 
-    @include respond-to("small") {
+    @include small {
       // background-size: 100% auto;
       background-position: bottom right;
     }
-    @include respond-to("landscape") {
+
+    @include medium {
+      height: 100%;
+      background-size: 100% auto;
+      background-position: bottom right;
+    }
+
+    @include large {
       background-size: auto 100%;
       background-position: bottom right;
-    }
-    @include respond-to("medium") {
       height: 100%;
-      background-position: bottom right;
-    }
-    @include respond-to("large") {
-      // background-size: auto 50%;
-      background-position: bottom right;
-      height: 100%;
-    }
-    @include respond-to("larger") {
-      // background-size: auto 100%;
-      background-position: bottom right;
     }
   }
 }
 
 h1 {
   font-size: 5vh;
-  width: 50%;
   margin-bottom: 50px;
   position: relative;
   z-index: 100;
+  margin-bottom: 10px;
+  font-size: 8vw;
 
-  @include respond-to("small") {
-    font-size: 5vh;
-    margin-bottom: 10px;
+  @include small {
     width: 100%;
+    font-size: 8vw;
   }
-  @include respond-to("landscape") {
-    font-size: 8vh;
-    margin-bottom: 10px;
+
+  @include medium {
+    // font-size: 6vh;
+  }
+  @include large {
     width: 50%;
-  }
-  @include respond-to("medium") {
-    font-size: 6vh;
-    margin-bottom: 10px;
-  }
-  @include respond-to("large") {
-    font-size: 6vh;
-    margin-bottom: 10px;
-  }
-  @include respond-to("larger") {
-    font-size: 10vh;
-    margin-bottom: 10px;
+    font-size: 4.5vw;
   }
 }
 
 h2 {
   width: 50%;
   font-weight: normal;
-  font-size: 4vh;
+  font-size: 4vw;
 
-  @include respond-to("small") {
-    font-size: 2vh;
+  @include small {
+    font-size: 4vw;
   }
-  @include respond-to("landscape") {
-    font-size: 5vh;
+
+  @include medium {
+    font-size: 4vw;
   }
-  @include respond-to("medium") {
-    font-size: 2.5vh;
-  }
-  @include respond-to("large") {
-    font-size: 2.5vh;
-  }
-  @include respond-to("larger") {
-    font-size: 5vh;
+
+  @include large {
+    font-size: 2vw;
   }
 }
 
@@ -248,6 +292,50 @@ ul {
 
   @media (max-width: "420px") {
     font-size: .7em;
+  }
+}
+
+.open-modal {
+  cursor: pointer;
+}
+
+.openSourceModal__content {
+  text-align: center;
+  background-color: #e3e3e3;
+  padding: 2%;
+  color: #3a3a3a;
+  border-radius: 20px;
+  max-height: 90vh;
+  overflow: auto;
+
+  .licenseimg {
+    display: block;
+    margin: 20px auto;
+    width: 10vh;
+    height: auto;
+  }
+
+  h2 {
+    text-align: center;
+  }
+}
+
+.cookiesModal__content {
+  background-color: #c7b299;
+  padding: 2%;
+
+  img {
+    float: left;
+    margin-right: 10px;
+    max-width: 20vw;
+    height: auto;
+  }
+
+  button {
+    border: 2px solid #a4694b;
+    border-radius: 10px;
+    background-color: #b87750;
+    padding: 10px;
   }
 }
 
