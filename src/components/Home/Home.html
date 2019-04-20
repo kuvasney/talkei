@@ -10,12 +10,12 @@
       <form>
         <div class="add-new-tweet__wrapper">
           <legend>Em sua mensagem será adicionado o @jairbolsonaro e nossa hashtag #TALKEI</legend>
-          <div id="tweetmessage" class="textmessage emojiOk" placeholder="#talkei @jairbolsonaro" contenteditable="true" :class="{'error':tweet_length > 110}"
-            @keyup="updateText($event)">
+          <div id="tweetmessage" class="textmessage emojiOk" placeholder="#talkei @jairbolsonaro" contenteditable="true" :class="{'error':tweet_length > char_limit}"
+            @keydown="updateText($event)">
             </div>
-          <em class="count_tweet" :class="{'error':tweet_length > 110}">{{ tweet_length ? tweet_length - 110 : '110' }}</em>
+          <em class="count_tweet" :class="{'error':tweet_length > char_limit}">{{ tweet_length ? tweet_length - char_limit : char_limit }}</em>
           <emojis @emoji="insertEmoji" v-show="!mobilecheck()" />
-          <p class="error" v-if="tweet_length > 110">Sua mensagem deve conter até 110 caracteres</p>
+          <p class="error" v-if="tweet_length >= char_limit">Sua mensagem deve conter até {{ char_limit }} caracteres</p>
         </div>
         <section class="recaptcha">
           <vue-recaptcha
@@ -33,26 +33,31 @@
     </article>
     <toaster ref="newTweet" text="Mensagem enviada com sucesso!" :is_show="new_tweet_success" />
     <ul class="tweetlist">
-      <li v-for="(tweet, index) in tweets.data" :key="index" :style="{'backgroundColor': tweet.color}"
+      <li v-for="(tweet, index) in tweets.data" :data-id="tweet.id" :key="index" :style="{'backgroundColor': tweet.color}"
         @click="messages_sent++">
         <div :class="checkLength(tweet.tweet)">
           <a
-            :href="`https://twitter.com/intent/tweet?screen_name=jairbolsonaro&button_hashtag=TALKEI&text=${tweet.tweet}`">{{ tweet.tweet }}</a>
+            :href="`https://twitter.com/intent/tweet?screen_name=jairbolsonaro&button_hashtag=TALKEI&text=${tweet.tweet}`" @click="countTweet(tweet.id)">{{ tweet.tweet }}</a>
         </div>
       </li>
-      <li class="separator" />
       <li v-if="isLoading">
-        <span class="loading">🍊</span>
+        <span class="loading">🍊 ...</span>
       </li>
       <li class="counter">
         <div>
           {{ messages_sent }} Tweets enviados até o momento
+          🍊
         </div>
       </li>
+      <!-- <li @click="bringMyTweets()">
+        carregar mais twwets
+      </li> -->
     </ul>
     <div class="console" v-if="toDebug">
-      <p>LAST PAGE {{ tweets.last_page }}</p>
-      <p>CURRENT PAGE {{ tweets.current_page }}</p>
+      <p>ACTUAL PAGE {{ actual_page }}</p>
+      <p>TOTAL {{ tweets.data.length }}</p>
+      <p>POSITION {{ innerH }}</p>
+      <p>OFFSET HEIGHT {{ scrollt }}</p>
     </div>
   </section>
 </div>

@@ -4,7 +4,7 @@ function Factory () {
    * @param {axios} actions
    * @return {object} request
    */
-  this.Get = (axios, page = 1) => {
+  this.Get = (axios, page) => {
     const request = axios.get(`https://www.talkei.net/retrieve?page=${page}`)
 
     return request
@@ -20,6 +20,18 @@ function Factory () {
 
     return request
   }
+  /**
+   * Save a tweet click
+   * @param {axios} actions
+   * @param {object} tweet id
+   * @return {object} request
+   */
+  this.CountTweet = (axios, id) => {
+    const request = axios.get(`https://www.talkei.net/counter?id=${id}`)
+
+    return request
+  }
 }
+
 
 export default new Factory()

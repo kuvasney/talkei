@@ -23,6 +23,7 @@ export default {
   methods: {
     emojiSent (emoji) {
       this.$emit('emoji', emoji)
+      this.toShow = false
     }
   }
 }

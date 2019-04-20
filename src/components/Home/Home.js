@@ -13,7 +13,14 @@ export default {
   data() {
     return {
       //THE TWEET LIST
-      tweets: {},
+      tweets: {
+        data: [],
+        totalPages: null
+      },
+      // MESSAGE CHAR LIMIT
+      char_limit: 110,
+      //ACTUAL PAGE
+      actual_page: 1,
       //THE TWEET LENGTH
       tweet_length: '',
       //BOXES COLORS ARRAY
@@ -39,7 +46,9 @@ export default {
       //MODAL
       showOpenSource: false,
       //DEBUGGER
-      toDebug: false
+      toDebug: false,
+      innerH: 0,
+      scrollt: 0
     }
   },
   methods: {
@@ -91,7 +100,7 @@ export default {
       const newTweet = {}
       newTweet.message = this.new_tweet
       HomeServices.PostTweet(this.$axios, {
-        tweet: this.new_tweet.innerText })
+        'tweet': this.new_tweet.innerText })
         .then(res => {
           newTweet.message = ''
           this.new_tweet.innerText = ''
@@ -100,9 +109,9 @@ export default {
           this.status = false
           this.token = null
 
-          this.$nextTick(() => {
-            this.bringMyTweets()
-          });
+          // this.$nextTick(() => {
+          //   this.bringMyTweets()
+          // });
 
           this.new_tweet_success = true
           setTimeout(() => { this.new_tweet_success = false }, 3000)
@@ -130,45 +139,54 @@ export default {
      * @param {Object} tweet text
      * @returns {Object}
     */
-    bringMyTweets() {
-      var _this = this
-      this.isLoading = true
-      if (!this.tweets.data) {
-        HomeServices.Get(this.$axios)
-          .then(res => {
-            this.tweets = {
-              data: res.data.data,
-              current_page: res.data.current_page,
-              last_page: res.data.last_page,
-              total: res.data.total
-            }
-            this.isLoading = false
-            generateColor()
-          }).catch(err => {
-            console.error('ERRO ', err)
-            this.isLoading = false
-          })
-      } else if (this.tweets.current_page < this.tweets.last_page) {
-        HomeServices.Get(this.$axios, this.tweets.current_page + 1)
-          .then(res => {
-            res.data.data.forEach(tweet => {
-              this.tweets.data.push(tweet)
-            })
-            this.tweets.current_page = res.data.current_page
-            this.isLoading = false
-            generateColor()
-          }).catch(err => {
-            console.error('ERRO ', err)
-            this.isLoading = false
-          })
+    bringMyTweets () {
+      let _this = this
+      if (this.actual_page === 1) {
+        getTweets(1)
+        this.actual_page = 2
+      } else if (this.actual_page > 1 && this.actual_page <= this.tweets.total_pages) {
+        getTweets(this.actual_page)
+        this.actual_page++
       } else {
-        this.isLoading = false
+        return false
+      }
+
+      function getTweets (page) {
+        if (_this.mobilecheck()) {
+          document.documentElement.scrollTo({
+            top: document.documentElement.offsetHeight - 200,
+            behavior: 'smooth'
+          })
+        }
+        _this.isLoading = true
+        HomeServices.Get(_this.$axios, page)
+        .then(res => {
+          _this.tweets.total_pages = res.data.totalPages
+          res.data.tweets.forEach(tweet => {
+            _this.tweets.data.push(tweet)
+          })
+          generateColor()
+          _this.isLoading = false
+        })
+        .catch(err => {
+          console.error('ERRO ', err)
+          _this.isLoading = false
+        })
       }
       function generateColor() {
         _this.tweets.data.map(tweet => {
           tweet.color = _this.getColour()
         })
       }
+    },
+    countTweet (id) {
+      HomeServices.CountTweet(this.$axios, id)
+        .then(res => {
+          this.messages_sent = res.data.count
+        })
+        .catch(err => {
+          console.error('ERROR', err)
+        })
     },
     /**
      * Get contenteditable div length
@@ -177,12 +195,9 @@ export default {
     updateText(e) {
       this.new_tweet = e.target
       this.tweet_length = e.target.innerText.length
-
-      // if (this.tweet_length < 3 || this.tweet_length > 110) {
-      //   this.status = false
-      // } else {
-      //   this.status = true
-      // }
+      if (e.target.innerText.length >= this.char_limit && e.keyCode !== 8) {
+        e.preventDefault()
+      }
     },
     /**
      * Append an emoji to contenteditable div
@@ -196,11 +211,11 @@ export default {
      * Events on page scroll
     */
     scroller() {
-      let bottomOfWindow;
+      let bottomOfWindow
       window.onscroll = () => {
         if (this.mobilecheck()) {
           // bottomOfWindow = Math.round(document.documentElement.scrollTop + window.innerHeight + 200)  >= document.documentElement.offsetHeight
-          bottomOfWindow = document.documentElement.scrollTop + window.innerHeight + 100 >= document.documentElement.offsetHeight
+          bottomOfWindow = Math.round(document.documentElement.scrollTop + window.innerHeight) === document.documentElement.offsetHeight
 
         } else {
           bottomOfWindow = document.documentElement.scrollTop + window.innerHeight === document.documentElement.offsetHeight
@@ -224,6 +239,7 @@ export default {
      */
     ready() {
       this.bringMyTweets()
+      this.countTweet(1)
     }
   },
   mounted() {

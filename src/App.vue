@@ -12,18 +12,13 @@
     </header>
     <router-view/>
     <footer class="app__footer">
-      <p @click="openSourceModal()" class="open-modal">
+      <p>
         <img src="@/assets/open_source.png" alt="Open Source" class="opensource"> <span class="hidemob">2019 Open Source.</span>
       </p>
       <ul class="linklist">
         <li>
-          <a href="">
-            Termos
-          </a>
-        </li>
-        <li>
-          <a href="">
-            Privacidade
+          <a @click="openSourceModal()" class="open-modal">
+            Termos & Privacidade
           </a>
         </li>
       </ul>
@@ -220,7 +215,8 @@ ul {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 10vh;
+  height: 5vh;
+  font-size: .8em;
   background-color: #e8e8e8;
   padding: 0 10px;
 
@@ -230,11 +226,11 @@ ul {
   }
 
   p {
-    line-height: 2em;
+    line-height: 1.2em;
   }
 
   .github {
-    height: 2em;
+    height: 1.5em;
     width: auto;
 
     @media (max-width: "420px") {
@@ -245,7 +241,7 @@ ul {
 
 .opensource {
   width: auto;
-  height: 2em;
+  height: 1.2em;
   margin-right: 10px;
   display: block;
   float: left;
