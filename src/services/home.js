@@ -33,5 +33,4 @@ function Factory () {
   }
 }
 
-
 export default new Factory()
